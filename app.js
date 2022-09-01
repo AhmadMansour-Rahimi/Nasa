@@ -10,6 +10,9 @@ var expresslayout = require('express-ejs-layouts')
 
 var app = express();
 
+
+//
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -26,7 +29,7 @@ app.use('/', indexRouter);
 
 //mongodbConnection
 var mongoose  = require('mongoose');
-mongoose.connect(process.env.DATABASE_URL);
+mongoose.connect('mongodb://localhost/Nasa');
 var registerModel = require('./models/register')
 
 
