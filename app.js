@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 //requires routes
 var indexRouter = require('./routes/index');
+var registerRouter = require('./routes/register')
 var expresslayout = require('express-ejs-layouts')
 
 var app = express();
@@ -25,6 +26,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/register' , registerRouter)
 
 
 //mongodbConnection
