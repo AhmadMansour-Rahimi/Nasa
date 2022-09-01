@@ -31,7 +31,7 @@ app.use('/register' , registerRouter)
 
 //mongodbConnection
 var mongoose  = require('mongoose');
-mongoose.connect('mongodb://localhost/Nasa');
+mongoose.connect('mongodb://localhost/Nasa1');
 var registerModel = require('./models/register')
 
 
