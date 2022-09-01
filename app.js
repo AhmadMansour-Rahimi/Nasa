@@ -27,6 +27,7 @@ app.use('/', indexRouter);
 //mongodbConnection
 var mongoose  = require('mongoose');
 mongoose.connect(process.env.DATABASE_URL);
+var registerModel = require('./models/register')
 
 
 // catch 404 and forward to error handler
