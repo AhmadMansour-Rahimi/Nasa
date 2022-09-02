@@ -14,9 +14,9 @@ var app = express();
 require('dotenv').config();
 
 //mongodbConnection
-var mongoose  = require('mongoose');
-mongoose.connect(process.env.DATABASE_URL);
-var registerModel = require('./models/register')
+//var mongoose  = require('mongoose');
+//mongoose.connect(process.env.DATABASE_URL);
+//var registerModel = require('./models/register')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
