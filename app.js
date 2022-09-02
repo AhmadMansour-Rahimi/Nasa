@@ -11,8 +11,12 @@ var expresslayout = require('express-ejs-layouts')
 
 var app = express();
 
+require('dotenv').config();
 
-//
+//mongodbConnection
+var mongoose  = require('mongoose');
+mongoose.connect(process.env.DATABASE_URL);
+var registerModel = require('./models/register')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,11 +32,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/register' , registerRouter)
 
-
-//mongodbConnection
-var mongoose  = require('mongoose');
-mongoose.connect('mongodb://localhost/Nasa1');
-var registerModel = require('./models/register')
 
 
 // catch 404 and forward to error handler
